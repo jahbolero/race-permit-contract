@@ -188,7 +188,7 @@ contract RacePermit is
         __Ownable_init();
         Drivrs = iDrivrs(DrivrsAddress);
         DefaultOperatorFiltererUpgradeable.__DefaultOperatorFilterer_init();
-        MAX_SUPPLY = 3000;
+        MAX_SUPPLY = 2888;
         isPresaleActive = false;
         _revealed = false;
         baseURI = "";

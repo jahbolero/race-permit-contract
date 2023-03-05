@@ -1,20 +1,20 @@
 {
   "manifestVersion": "3.2",
   "admin": {
-    "address": "0x1E782f3056f8f2659e86824B3b9536167cFc6f54",
-    "txHash": "0xe2b1cf8560e43f1fbe3f71443bf3d3b86bc3944da3560603a21b196243c8475e"
+    "address": "0x711CFFE4cA194912291F0Dbf2Db0a7b07EA70CbB",
+    "txHash": "0x7945708ecab2a0bfc55609f44f53a41799874b288ef40a04ee47b1edbf285a70"
   },
   "proxies": [
     {
-      "address": "0x7df1b3AE827aCC94af9805598E624B295f94672a",
-      "txHash": "0x7752c6b8bc51800e20a380032f95a8d62ab76751149b0c03cdb391f24c806146",
+      "address": "0x83FE235e4a41eb107d03B37b09BAfCE0f1fE647E",
+      "txHash": "0x9a5d54c88165856090f2ded8e4e57e33e901bbb4f17dc49157cacf64fde6d7e4",
       "kind": "transparent"
     }
   ],
   "impls": {
-    "4df6fa7045115b029f549e5895cdaec2defb4311592cfdc4c847fedd335891f0": {
-      "address": "0x74a3E16ae0a34d921300c619297799D8595AA053",
-      "txHash": "0xe53e297e66d0eea76e4ceaf52281b076bc67686ed84ec7b1f172720bbbcf212a",
+    "04f9f969d853c5d2ac4ddbca10996483f3c0873ec2e1da372b2b58fbf753f0b4": {
+      "address": "0x8944eA3E6d304dEb5320428B08a541ECa6D65Cc5",
+      "txHash": "0x2d7d1f90ddce2ada1ff80a0168f85887b15de2f1e7bdbda8745d9f65b198b2a1",
       "layout": {
         "solcVersion": "0.8.13",
         "storage": [
@@ -63,7 +63,7 @@
             "label": "Drivrs",
             "offset": 0,
             "slot": "101",
-            "type": "t_contract(iDrivrs)5519",
+            "type": "t_contract(iDrivrs)4703",
             "contract": "RacePermit",
             "src": "contracts/RacePermit.sol:20"
           },
@@ -116,20 +116,12 @@
             "src": "contracts/RacePermit.sol:31"
           },
           {
-            "label": "claimedIds",
-            "offset": 0,
-            "slot": "107",
-            "type": "t_array(t_uint256)dyn_storage",
-            "contract": "RacePermit",
-            "src": "contracts/RacePermit.sol:32"
-          },
-          {
             "label": "usedDigests",
             "offset": 0,
-            "slot": "108",
+            "slot": "107",
             "type": "t_mapping(t_bytes32,t_bool)",
             "contract": "RacePermit",
-            "src": "contracts/RacePermit.sol:33"
+            "src": "contracts/RacePermit.sol:32"
           }
         ],
         "types": {
@@ -145,10 +137,6 @@
             "label": "uint256[50]",
             "numberOfBytes": "1600"
           },
-          "t_array(t_uint256)dyn_storage": {
-            "label": "uint256[]",
-            "numberOfBytes": "32"
-          },
           "t_bool": {
             "label": "bool",
             "numberOfBytes": "1"
@@ -157,7 +145,7 @@
             "label": "bytes32",
             "numberOfBytes": "32"
           },
-          "t_contract(iDrivrs)5519": {
+          "t_contract(iDrivrs)4703": {
             "label": "contract iDrivrs",
             "numberOfBytes": "20"
           },

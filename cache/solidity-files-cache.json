@@ -123,42 +123,6 @@
         "ERC721AQueryableUpgradeable"
       ]
     },
-    "/Users/jeremiahjrvalero/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
-      "lastModificationDate": 1656432762078,
-      "contentHash": "9c54c6c065d9e590fdcdd72c451425b9",
-      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
-      "solcConfig": {
-        "version": "0.8.13",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Strings"
-      ]
-    },
     "/Users/jeremiahjrvalero/node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
       "lastModificationDate": 1677216588773,
       "contentHash": "403ce8273abde646bff81558ddf512ad",
@@ -234,6 +198,42 @@
       ],
       "artifacts": [
         "Ownable"
+      ]
+    },
+    "/Users/jeremiahjrvalero/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1656432762078,
+      "contentHash": "9c54c6c065d9e590fdcdd72c451425b9",
+      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.13",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Strings"
       ]
     },
     "/Users/jeremiahjrvalero/node_modules/@openzeppelin/contracts/utils/cryptography/MerkleProof.sol": {
@@ -759,8 +759,8 @@
       ]
     },
     "/Users/jeremiahjrvalero/Documents/nft-projects/ganjagym/racepermit-contract-hardhat/contracts/RacePermit.sol": {
-      "lastModificationDate": 1677404687475,
-      "contentHash": "80d1d6489827f372dfc25cf589c30baa",
+      "lastModificationDate": 1677993224631,
+      "contentHash": "7b809783ecc3df859915f61be4dbfaed",
       "sourceName": "contracts/RacePermit.sol",
       "solcConfig": {
         "version": "0.8.13",
@@ -801,50 +801,6 @@
       "artifacts": [
         "RacePermit",
         "iDrivrs"
-      ]
-    },
-    "/Users/jeremiahjrvalero/Documents/nft-projects/ganjagym/racepermit-contract-hardhat/contracts/Drivrs2.sol": {
-      "lastModificationDate": 1677295548265,
-      "contentHash": "16cd5bce990c22211ef7a97c472f5749",
-      "sourceName": "contracts/Drivrs2.sol",
-      "solcConfig": {
-        "version": "0.8.13",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/access/Ownable.sol",
-        "@openzeppelin/contracts/utils/Strings.sol",
-        "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol",
-        "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
-        "./operator-filter-registry/DefaultOperatorFiltererUpgradeable.sol",
-        "./extensions/ERC721AQueryableUpgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Drivrs2"
       ]
     },
     "/Users/jeremiahjrvalero/Documents/nft-projects/ganjagym/racepermit-contract-hardhat/contracts/operator-filter-registry/src/OperatorFilterer.sol": {
@@ -1004,44 +960,6 @@
         "ERC4907AUpgradeable"
       ]
     },
-    "/Users/jeremiahjrvalero/Documents/nft-projects/ganjagym/racepermit-contract-hardhat/contracts/extensions/ERC4907AStorage.sol": {
-      "lastModificationDate": 1677292834526,
-      "contentHash": "348f51d2a7b0b0c9932ca6042892bee3",
-      "sourceName": "contracts/extensions/ERC4907AStorage.sol",
-      "solcConfig": {
-        "version": "0.8.13",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./ERC4907AUpgradeable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC4907AStorage"
-      ]
-    },
     "/Users/jeremiahjrvalero/Documents/nft-projects/ganjagym/racepermit-contract-hardhat/contracts/extensions/IERC4907AUpgradeable.sol": {
       "lastModificationDate": 1677292834527,
       "contentHash": "7d490f0b32f26cb352ba94bff723641e",
@@ -1078,6 +996,44 @@
       ],
       "artifacts": [
         "IERC4907AUpgradeable"
+      ]
+    },
+    "/Users/jeremiahjrvalero/Documents/nft-projects/ganjagym/racepermit-contract-hardhat/contracts/extensions/ERC4907AStorage.sol": {
+      "lastModificationDate": 1677292834526,
+      "contentHash": "348f51d2a7b0b0c9932ca6042892bee3",
+      "sourceName": "contracts/extensions/ERC4907AStorage.sol",
+      "solcConfig": {
+        "version": "0.8.13",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC4907AUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC4907AStorage"
       ]
     }
   }
