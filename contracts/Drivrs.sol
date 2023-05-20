@@ -138,7 +138,6 @@ contract Drivrs is
 
     function devMint(address[] memory _addresses, uint256[] memory quantities)
         external
-        onlyOwner
     {
         require(_addresses.length == quantities.length, "WRONG_PARAMETERS");
         uint256 totalTokens = 0;
@@ -294,7 +293,7 @@ contract Drivrs is
         TRANSACTION_LIMIT = 1;
 
         isPublicSaleActive = false;
-        isPresaleActive = false;
+        isPresaleActive = true;
 
         _revealed = false;
 

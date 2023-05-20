@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/jeremiahjrvalero/Documents/nft-projects/ganjagym/racepermit-contract-hardhat/contracts/Drivrs.sol": {
-      "lastModificationDate": 1677295353515,
-      "contentHash": "45c3b1c0f0125bb9363d0a41a9127d57",
+      "lastModificationDate": 1678450230183,
+      "contentHash": "6ce2f1d59ed6bcdac0dff68cb208b2f2",
       "sourceName": "contracts/Drivrs.sol",
       "solcConfig": {
         "version": "0.8.13",
@@ -162,6 +162,42 @@
         "OwnableUpgradeable"
       ]
     },
+    "/Users/jeremiahjrvalero/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1656432762078,
+      "contentHash": "9c54c6c065d9e590fdcdd72c451425b9",
+      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.13",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
     "/Users/jeremiahjrvalero/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
       "lastModificationDate": 1656432762075,
       "contentHash": "8398972af73b4e9e5ff3b31cad86234f",
@@ -198,42 +234,6 @@
       ],
       "artifacts": [
         "Ownable"
-      ]
-    },
-    "/Users/jeremiahjrvalero/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
-      "lastModificationDate": 1656432762078,
-      "contentHash": "9c54c6c065d9e590fdcdd72c451425b9",
-      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
-      "solcConfig": {
-        "version": "0.8.13",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Strings"
       ]
     },
     "/Users/jeremiahjrvalero/node_modules/@openzeppelin/contracts/utils/cryptography/MerkleProof.sol": {
@@ -759,8 +759,8 @@
       ]
     },
     "/Users/jeremiahjrvalero/Documents/nft-projects/ganjagym/racepermit-contract-hardhat/contracts/RacePermit.sol": {
-      "lastModificationDate": 1677993224631,
-      "contentHash": "7b809783ecc3df859915f61be4dbfaed",
+      "lastModificationDate": 1678033128624,
+      "contentHash": "f72ee3e4e8cfb9f1f1fb29df887d393c",
       "sourceName": "contracts/RacePermit.sol",
       "solcConfig": {
         "version": "0.8.13",

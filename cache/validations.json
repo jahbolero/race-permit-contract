@@ -333,6 +333,290 @@
         },
         "solcVersion": "0.8.13"
       },
+      "contracts/Drivrs.sol:Drivrs": {
+        "src": "contracts/Drivrs.sol:11",
+        "version": {
+          "withMetadata": "ae8b0be9ee8a2d54eff4f2152569ab6c7abeece56c02bf67fd74a39e5eaa2e5b",
+          "withoutMetadata": "debe10ea08f86e4f9e112d035b89e887f628df3d9fc871418e85f3e816437ed6",
+          "linkedWithoutMetadata": "debe10ea08f86e4f9e112d035b89e887f628df3d9fc871418e85f3e816437ed6"
+        },
+        "inherit": [
+          "contracts/extensions/ERC721AQueryableUpgradeable.sol:ERC721AQueryableUpgradeable",
+          "contracts/extensions/IERC721AQueryableUpgradeable.sol:IERC721AQueryableUpgradeable",
+          "contracts/ERC721AUpgradeable.sol:ERC721AUpgradeable",
+          "contracts/IERC721AUpgradeable.sol:IERC721AUpgradeable",
+          "contracts/ERC721A__Initializable.sol:ERC721A__Initializable",
+          "contracts/operator-filter-registry/DefaultOperatorFiltererUpgradeable.sol:DefaultOperatorFiltererUpgradeable",
+          "contracts/operator-filter-registry/src/OperatorFiltererUpgradeable.sol:OperatorFiltererUpgradeable",
+          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:OwnableUpgradeable",
+          "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:ContextUpgradeable",
+          "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [
+          "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol:MerkleProof",
+          "@openzeppelin/contracts/utils/Strings.sol:Strings",
+          "@openzeppelin/contracts/utils/cryptography/ECDSA.sol:ECDSA"
+        ],
+        "methods": [
+          "mint(uint256,uint64,bytes)",
+          "presaleMint(bytes32[],uint256,uint256)",
+          "freeMint(bytes32[],uint256,uint256)",
+          "devMint(address[],uint256[])",
+          "setBaseURI(string)",
+          "reveal(bool,string)",
+          "setPublicSaleStatus()",
+          "setPreSaleStatus()",
+          "withdraw()",
+          "tokenURI(uint256)",
+          "numberMinted(address)",
+          "setPreSaleRoot(bytes32)",
+          "setFreeMintRoot(bytes32)",
+          "setSigner(address)",
+          "setPublicPrice(uint256)",
+          "setPresalePrice(uint256)",
+          "decreaseSupply(uint256)",
+          "setMintLimit(uint256)",
+          "setTransactionLimit(uint256)",
+          "transferFrom(address,address,uint256)",
+          "safeTransferFrom(address,address,uint256)",
+          "safeTransferFrom(address,address,uint256,bytes)",
+          "initialize()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:94"
+            },
+            {
+              "label": "MAX_SUPPLY",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_uint256",
+              "contract": "Drivrs",
+              "src": "contracts/Drivrs.sol:16"
+            },
+            {
+              "label": "WL_PRICE",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_uint256",
+              "contract": "Drivrs",
+              "src": "contracts/Drivrs.sol:18"
+            },
+            {
+              "label": "PUBLIC_PRICE",
+              "offset": 0,
+              "slot": "103",
+              "type": "t_uint256",
+              "contract": "Drivrs",
+              "src": "contracts/Drivrs.sol:19"
+            },
+            {
+              "label": "MINT_LIMIT",
+              "offset": 0,
+              "slot": "104",
+              "type": "t_uint256",
+              "contract": "Drivrs",
+              "src": "contracts/Drivrs.sol:21"
+            },
+            {
+              "label": "TRANSACTION_LIMIT",
+              "offset": 0,
+              "slot": "105",
+              "type": "t_uint256",
+              "contract": "Drivrs",
+              "src": "contracts/Drivrs.sol:22"
+            },
+            {
+              "label": "isPublicSaleActive",
+              "offset": 0,
+              "slot": "106",
+              "type": "t_bool",
+              "contract": "Drivrs",
+              "src": "contracts/Drivrs.sol:24"
+            },
+            {
+              "label": "isPresaleActive",
+              "offset": 1,
+              "slot": "106",
+              "type": "t_bool",
+              "contract": "Drivrs",
+              "src": "contracts/Drivrs.sol:25"
+            },
+            {
+              "label": "_revealed",
+              "offset": 2,
+              "slot": "106",
+              "type": "t_bool",
+              "contract": "Drivrs",
+              "src": "contracts/Drivrs.sol:27"
+            },
+            {
+              "label": "baseURI",
+              "offset": 0,
+              "slot": "107",
+              "type": "t_string_storage",
+              "contract": "Drivrs",
+              "src": "contracts/Drivrs.sol:29"
+            },
+            {
+              "label": "presaleRoot",
+              "offset": 0,
+              "slot": "108",
+              "type": "t_bytes32",
+              "contract": "Drivrs",
+              "src": "contracts/Drivrs.sol:31"
+            },
+            {
+              "label": "freemintRoot",
+              "offset": 0,
+              "slot": "109",
+              "type": "t_bytes32",
+              "contract": "Drivrs",
+              "src": "contracts/Drivrs.sol:32"
+            },
+            {
+              "label": "userPurchase",
+              "offset": 0,
+              "slot": "110",
+              "type": "t_mapping(t_address,t_struct(UserPurchaseInfo)1498_storage)",
+              "contract": "Drivrs",
+              "src": "contracts/Drivrs.sol:39"
+            },
+            {
+              "label": "addressBlockBought",
+              "offset": 0,
+              "slot": "111",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "Drivrs",
+              "src": "contracts/Drivrs.sol:40"
+            },
+            {
+              "label": "signer",
+              "offset": 0,
+              "slot": "112",
+              "type": "t_address",
+              "contract": "Drivrs",
+              "src": "contracts/Drivrs.sol:47"
+            },
+            {
+              "label": "usedDigests",
+              "offset": 0,
+              "slot": "113",
+              "type": "t_mapping(t_bytes32,t_bool)",
+              "contract": "Drivrs",
+              "src": "contracts/Drivrs.sol:48"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_struct(UserPurchaseInfo)1498_storage)": {
+              "label": "mapping(address => struct Drivrs.UserPurchaseInfo)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_bool)": {
+              "label": "mapping(bytes32 => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_struct(UserPurchaseInfo)1498_storage": {
+              "label": "struct Drivrs.UserPurchaseInfo",
+              "members": [
+                {
+                  "label": "presaleMinted",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "freeMinted",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.8.13"
+      },
       "contracts/ERC721AStorage.sol:ERC721AStorage": {
         "src": "contracts/ERC721AStorage.sol:5",
         "version": {
@@ -466,224 +750,6 @@
           "name()",
           "symbol()",
           "tokenURI(uint256)"
-        ],
-        "linkReferences": [],
-        "errors": [],
-        "layout": {
-          "storage": [],
-          "types": {},
-          "layoutVersion": "1.2",
-          "flat": false
-        },
-        "solcVersion": "0.8.13"
-      },
-      "contracts/RacePermit.sol:RacePermit": {
-        "src": "contracts/RacePermit.sol:15",
-        "version": {
-          "withMetadata": "9be4aea6a88d9f750ef4128c4387d15a0594926237440e5dcc124bb06509163f",
-          "withoutMetadata": "04f9f969d853c5d2ac4ddbca10996483f3c0873ec2e1da372b2b58fbf753f0b4",
-          "linkedWithoutMetadata": "04f9f969d853c5d2ac4ddbca10996483f3c0873ec2e1da372b2b58fbf753f0b4"
-        },
-        "inherit": [
-          "contracts/extensions/ERC721AQueryableUpgradeable.sol:ERC721AQueryableUpgradeable",
-          "contracts/extensions/IERC721AQueryableUpgradeable.sol:IERC721AQueryableUpgradeable",
-          "contracts/ERC721AUpgradeable.sol:ERC721AUpgradeable",
-          "contracts/IERC721AUpgradeable.sol:IERC721AUpgradeable",
-          "contracts/ERC721A__Initializable.sol:ERC721A__Initializable",
-          "contracts/operator-filter-registry/DefaultOperatorFiltererUpgradeable.sol:DefaultOperatorFiltererUpgradeable",
-          "contracts/operator-filter-registry/src/OperatorFiltererUpgradeable.sol:OperatorFiltererUpgradeable",
-          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:OwnableUpgradeable",
-          "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:ContextUpgradeable",
-          "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:Initializable"
-        ],
-        "libraries": [
-          "@openzeppelin/contracts/utils/Strings.sol:Strings"
-        ],
-        "methods": [
-          "mint(uint256[])",
-          "devMint(address[],uint256[])",
-          "setBaseURI(string)",
-          "reveal(bool,string)",
-          "setPreSaleStatus()",
-          "tokenURI(uint256)",
-          "decreaseSupply(uint256)",
-          "getClaimed(uint256,uint256)",
-          "transferFrom(address,address,uint256)",
-          "safeTransferFrom(address,address,uint256)",
-          "safeTransferFrom(address,address,uint256,bytes)",
-          "initialize(address)"
-        ],
-        "linkReferences": [],
-        "errors": [],
-        "layout": {
-          "storage": [
-            {
-              "label": "_initialized",
-              "offset": 0,
-              "slot": "0",
-              "type": "t_uint8",
-              "contract": "Initializable",
-              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
-              "retypedFrom": "bool"
-            },
-            {
-              "label": "_initializing",
-              "offset": 1,
-              "slot": "0",
-              "type": "t_bool",
-              "contract": "Initializable",
-              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
-            },
-            {
-              "label": "__gap",
-              "offset": 0,
-              "slot": "1",
-              "type": "t_array(t_uint256)50_storage",
-              "contract": "ContextUpgradeable",
-              "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
-            },
-            {
-              "label": "_owner",
-              "offset": 0,
-              "slot": "51",
-              "type": "t_address",
-              "contract": "OwnableUpgradeable",
-              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
-            },
-            {
-              "label": "__gap",
-              "offset": 0,
-              "slot": "52",
-              "type": "t_array(t_uint256)49_storage",
-              "contract": "OwnableUpgradeable",
-              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:94"
-            },
-            {
-              "label": "Drivrs",
-              "offset": 0,
-              "slot": "101",
-              "type": "t_contract(iDrivrs)3836",
-              "contract": "RacePermit",
-              "src": "contracts/RacePermit.sol:20"
-            },
-            {
-              "label": "MAX_SUPPLY",
-              "offset": 0,
-              "slot": "102",
-              "type": "t_uint256",
-              "contract": "RacePermit",
-              "src": "contracts/RacePermit.sol:22"
-            },
-            {
-              "label": "isPresaleActive",
-              "offset": 0,
-              "slot": "103",
-              "type": "t_bool",
-              "contract": "RacePermit",
-              "src": "contracts/RacePermit.sol:24"
-            },
-            {
-              "label": "_revealed",
-              "offset": 1,
-              "slot": "103",
-              "type": "t_bool",
-              "contract": "RacePermit",
-              "src": "contracts/RacePermit.sol:26"
-            },
-            {
-              "label": "baseURI",
-              "offset": 0,
-              "slot": "104",
-              "type": "t_string_storage",
-              "contract": "RacePermit",
-              "src": "contracts/RacePermit.sol:28"
-            },
-            {
-              "label": "addressBlockBought",
-              "offset": 0,
-              "slot": "105",
-              "type": "t_mapping(t_address,t_uint256)",
-              "contract": "RacePermit",
-              "src": "contracts/RacePermit.sol:30"
-            },
-            {
-              "label": "claimed",
-              "offset": 0,
-              "slot": "106",
-              "type": "t_mapping(t_uint256,t_bool)",
-              "contract": "RacePermit",
-              "src": "contracts/RacePermit.sol:31"
-            },
-            {
-              "label": "usedDigests",
-              "offset": 0,
-              "slot": "107",
-              "type": "t_mapping(t_bytes32,t_bool)",
-              "contract": "RacePermit",
-              "src": "contracts/RacePermit.sol:32"
-            }
-          ],
-          "types": {
-            "t_address": {
-              "label": "address",
-              "numberOfBytes": "20"
-            },
-            "t_array(t_uint256)49_storage": {
-              "label": "uint256[49]",
-              "numberOfBytes": "1568"
-            },
-            "t_array(t_uint256)50_storage": {
-              "label": "uint256[50]",
-              "numberOfBytes": "1600"
-            },
-            "t_bool": {
-              "label": "bool",
-              "numberOfBytes": "1"
-            },
-            "t_bytes32": {
-              "label": "bytes32",
-              "numberOfBytes": "32"
-            },
-            "t_contract(iDrivrs)3836": {
-              "label": "contract iDrivrs",
-              "numberOfBytes": "20"
-            },
-            "t_mapping(t_address,t_uint256)": {
-              "label": "mapping(address => uint256)",
-              "numberOfBytes": "32"
-            },
-            "t_mapping(t_bytes32,t_bool)": {
-              "label": "mapping(bytes32 => bool)",
-              "numberOfBytes": "32"
-            },
-            "t_mapping(t_uint256,t_bool)": {
-              "label": "mapping(uint256 => bool)",
-              "numberOfBytes": "32"
-            },
-            "t_string_storage": {
-              "label": "string",
-              "numberOfBytes": "32"
-            },
-            "t_uint256": {
-              "label": "uint256",
-              "numberOfBytes": "32"
-            },
-            "t_uint8": {
-              "label": "uint8",
-              "numberOfBytes": "1"
-            }
-          },
-          "layoutVersion": "1.2",
-          "flat": true
-        },
-        "solcVersion": "0.8.13"
-      },
-      "contracts/RacePermit.sol:iDrivrs": {
-        "src": "contracts/RacePermit.sol:11",
-        "inherit": [],
-        "libraries": [],
-        "methods": [
-          "ownerOf(uint256)"
         ],
         "linkReferences": [],
         "errors": [],
@@ -1210,9 +1276,9 @@
       "contracts/Drivrs.sol:Drivrs": {
         "src": "contracts/Drivrs.sol:11",
         "version": {
-          "withMetadata": "fdc0b3b4e7ac25aa3d3c6f7c9aa03fa0b1bf844458848606e1cabe83b2d7e271",
-          "withoutMetadata": "6789313ccd1942711692a872fb627dca34d3fcbcfcb6f7e61cc63af80aa69ab7",
-          "linkedWithoutMetadata": "6789313ccd1942711692a872fb627dca34d3fcbcfcb6f7e61cc63af80aa69ab7"
+          "withMetadata": "ae8b0be9ee8a2d54eff4f2152569ab6c7abeece56c02bf67fd74a39e5eaa2e5b",
+          "withoutMetadata": "debe10ea08f86e4f9e112d035b89e887f628df3d9fc871418e85f3e816437ed6",
+          "linkedWithoutMetadata": "debe10ea08f86e4f9e112d035b89e887f628df3d9fc871418e85f3e816437ed6"
         },
         "inherit": [
           "contracts/extensions/ERC721AQueryableUpgradeable.sol:ERC721AQueryableUpgradeable",
@@ -1638,9 +1704,9 @@
       "contracts/RacePermit.sol:RacePermit": {
         "src": "contracts/RacePermit.sol:15",
         "version": {
-          "withMetadata": "9be4aea6a88d9f750ef4128c4387d15a0594926237440e5dcc124bb06509163f",
-          "withoutMetadata": "04f9f969d853c5d2ac4ddbca10996483f3c0873ec2e1da372b2b58fbf753f0b4",
-          "linkedWithoutMetadata": "04f9f969d853c5d2ac4ddbca10996483f3c0873ec2e1da372b2b58fbf753f0b4"
+          "withMetadata": "65794e044a3eba9b4f95621490d16a0a4db989f3ab1a82803a03faa35d8f60b5",
+          "withoutMetadata": "0240a28de2babdf0fac6031481874546d1f2c528fefaa0bc3248811eba929009",
+          "linkedWithoutMetadata": "0240a28de2babdf0fac6031481874546d1f2c528fefaa0bc3248811eba929009"
         },
         "inherit": [
           "contracts/extensions/ERC721AQueryableUpgradeable.sol:ERC721AQueryableUpgradeable",
@@ -1720,7 +1786,7 @@
               "label": "Drivrs",
               "offset": 0,
               "slot": "101",
-              "type": "t_contract(iDrivrs)4703",
+              "type": "t_contract(iDrivrs)4701",
               "contract": "RacePermit",
               "src": "contracts/RacePermit.sol:20"
             },
@@ -1802,7 +1868,7 @@
               "label": "bytes32",
               "numberOfBytes": "32"
             },
-            "t_contract(iDrivrs)4703": {
+            "t_contract(iDrivrs)4701": {
               "label": "contract iDrivrs",
               "numberOfBytes": "20"
             },

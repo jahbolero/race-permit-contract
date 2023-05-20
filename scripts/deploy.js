@@ -3,10 +3,15 @@
 async function main() {
   // Get the contract factory
   const MyContract = await ethers.getContractFactory('RacePermit');
+  const drivrsFactory = await ethers.getContractFactory('Drivrs');
+
+  const drivrsContract = await drivrsFactory.deploy();
+  
+  console.log("drivrs deployed to:", drivrsContract.address);
 
   // Deploy the contract
   //Drivrs Address
-  const myContract = await upgrades.deployProxy(MyContract, ["0x2B4B9457d6b7E7B3A814cffcaF6cFFF7ee9c3673"]);
+  const myContract = await upgrades.deployProxy(MyContract, [drivrsContract.address]);
 
   // Wait for the contract to be mined and initialized
   await myContract.deployed();

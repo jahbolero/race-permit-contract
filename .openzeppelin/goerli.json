@@ -1,20 +1,20 @@
 {
   "manifestVersion": "3.2",
   "admin": {
-    "address": "0x711CFFE4cA194912291F0Dbf2Db0a7b07EA70CbB",
-    "txHash": "0x7945708ecab2a0bfc55609f44f53a41799874b288ef40a04ee47b1edbf285a70"
+    "address": "0xF0Db0a50F128a0888d25d8EE31B9D1C781dF2A0e",
+    "txHash": "0x5a9dfc15b4ad914115ecfb88d4919ed7e1bab5073c5e518eac69400995150432"
   },
   "proxies": [
     {
-      "address": "0x83FE235e4a41eb107d03B37b09BAfCE0f1fE647E",
-      "txHash": "0x9a5d54c88165856090f2ded8e4e57e33e901bbb4f17dc49157cacf64fde6d7e4",
+      "address": "0xce597d81e5971992254D445f3cF9B48325F0C4F0",
+      "txHash": "0x574ac31ab88b225f14a9c6d3bab696baef3bbac47580836adbcce961ff56804c",
       "kind": "transparent"
     }
   ],
   "impls": {
-    "04f9f969d853c5d2ac4ddbca10996483f3c0873ec2e1da372b2b58fbf753f0b4": {
-      "address": "0x8944eA3E6d304dEb5320428B08a541ECa6D65Cc5",
-      "txHash": "0x2d7d1f90ddce2ada1ff80a0168f85887b15de2f1e7bdbda8745d9f65b198b2a1",
+    "0240a28de2babdf0fac6031481874546d1f2c528fefaa0bc3248811eba929009": {
+      "address": "0x3E248e34DF22d950C89EAF97E752A14C410a702f",
+      "txHash": "0xc6fb70e86d5197375aab3eefa6e9977f3413c5dd0c54d246cc8affdd36dd70a4",
       "layout": {
         "solcVersion": "0.8.13",
         "storage": [
@@ -63,7 +63,7 @@
             "label": "Drivrs",
             "offset": 0,
             "slot": "101",
-            "type": "t_contract(iDrivrs)4703",
+            "type": "t_contract(iDrivrs)4701",
             "contract": "RacePermit",
             "src": "contracts/RacePermit.sol:20"
           },
@@ -145,7 +145,7 @@
             "label": "bytes32",
             "numberOfBytes": "32"
           },
-          "t_contract(iDrivrs)4703": {
+          "t_contract(iDrivrs)4701": {
             "label": "contract iDrivrs",
             "numberOfBytes": "20"
           },
