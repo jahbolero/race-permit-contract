@@ -8,8 +8,8 @@ import "./ERC721AQueryable.sol";
 import "./operator-filter-registry/OperatorFilterer.sol";
 
 
-contract RacePermit is ERC721AQueryable, Ownable, OperatorFilterer{
-    uint16 public MAX_SUPPLY = 2888;
+contract Vehicls is ERC721AQueryable, Ownable, OperatorFilterer{
+    uint16 public MAX_SUPPLY = 5776;
 
     bool public isFreeMintActive = false;
 
@@ -28,7 +28,7 @@ contract RacePermit is ERC721AQueryable, Ownable, OperatorFilterer{
     address signer;
     mapping(bytes32 => bool) public usedDigests;
 
-    constructor() ERC721A("RacePermit", "RACEPERMIT") OperatorFilterer(address(0x3cc6CddA760b79bAfa08dF41ECFA224f810dCeB6), false) {}
+    constructor() ERC721A("Vehicls", "Vehicls") OperatorFilterer(address(0x3cc6CddA760b79bAfa08dF41ECFA224f810dCeB6), false) {}
     modifier isSecured(uint16 mintType) {
         require(tx.origin == msg.sender, "CONTRACTS_NOT_ALLOWED_TO_MINT");
         if (mintType == 3) {
