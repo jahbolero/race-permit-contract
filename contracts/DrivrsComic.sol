@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import "./operator-filter-registry/OperatorFilterer.sol";
 
 
-abstract contract DrivrsComic is ERC1155, ERC2981, OperatorFilterer, Ownable {
+contract DrivrsComic is ERC1155, ERC2981, OperatorFilterer, Ownable {
 
          string public name;
     string public symbol;
@@ -29,10 +29,11 @@ abstract contract DrivrsComic is ERC1155, ERC2981, OperatorFilterer, Ownable {
         uint16 freeMinted;
     }
 
-    mapping(address => UserPurchaseInfo) public userPurchase; 
+   
     struct ChapterInfo{
         uint16 maxSupply;
         uint16 mintedSupply;
+         mapping(address => UserPurchaseInfo) userPurchase; 
     }
 
     mapping(uint16 => ChapterInfo) public chapters;
@@ -63,15 +64,15 @@ abstract contract DrivrsComic is ERC1155, ERC2981, OperatorFilterer, Ownable {
         bytes32 leaf = keccak256(abi.encodePacked(msg.sender, maxMint));
         require(MerkleProof.verify(proof, freemintRoot, leaf), "PROOF_INVALID");
         require(
-            userPurchase[msg.sender].freeMinted + numberOfTokens <= maxMint,
+            chapters[currentChapter].userPurchase[msg.sender].freeMinted + numberOfTokens <= maxMint,
             "EXCEED_ALLOCATED_MINT_LIMIT"
         );
-        userPurchase[msg.sender].freeMinted += numberOfTokens;
-            _mint(msg.sender, numberOfTokens,);
+         chapters[currentChapter].userPurchase[msg.sender].freeMinted += numberOfTokens;
+        chapters[currentChapter].mintedSupply += numberOfTokens;
+        _mint(msg.sender, currentChapter,numberOfTokens, "");
     }
 
     function setChapterSupply(uint16 chapter, uint16 supply) external onlyOwner{
-        require(chapters[chapter].maxSupply > supply, "NOT_ALLOWED_TO_INCREASE_SUPPLY");
         chapters[chapter].maxSupply = supply;
     }
 
