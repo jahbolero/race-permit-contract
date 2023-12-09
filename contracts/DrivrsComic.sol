@@ -17,7 +17,7 @@ contract DrivrsComic is ERC1155, ERC2981, OperatorFilterer, Ownable {
 
  constructor() ERC1155("") OperatorFilterer(address(0x3cc6CddA760b79bAfa08dF41ECFA224f810dCeB6), false) {
          name = "DRVRS Comics";
-        symbol = "DRVRS";
+        symbol = "DRVRSCOMIC";
  }
 
 
@@ -82,6 +82,10 @@ contract DrivrsComic is ERC1155, ERC2981, OperatorFilterer, Ownable {
 
     function setFreeMintStatus() external onlyOwner {
         isFreeMintActive = !isFreeMintActive;
+    }
+    
+    function setFreeMintRoot(bytes32 _freemintRoot) external onlyOwner {
+        freemintRoot = _freemintRoot;
     }
 
     //Overrides

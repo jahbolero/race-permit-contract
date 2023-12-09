@@ -5,12 +5,14 @@ async function main() {
     const echelonContract = await ethers.getContractFactory('TheEchelon');
     const racePermitContract = await ethers.getContractFactory('RacePermit');
     const vehiclsContract = await ethers.getContractFactory('Vehicls');
+    const comicContract = await ethers.getContractFactory('DrivrsComic')
   
     // Deploy the contract
     // Drivrs Address
     const myEchelonContract = await echelonContract.deploy();
     const myRacePermitContract = await racePermitContract.deploy();
     const myVehiclsContract = await vehiclsContract.deploy();
+    const myComicContract = await comicContract.deploy();
 
   
     console.log("myEchelonContract deployed to:", myEchelonContract.address);
@@ -19,14 +21,19 @@ async function main() {
 
     console.log("myVehiclsContract deployed to:", myVehiclsContract.address);
 
+
+    console.log("myComicContract deployed to:", myComicContract.address);
+
     console.log(`Waiting for blocks confirmations...`);
     await myEchelonContract.deployTransaction.wait(2);
     await myRacePermitContract.deployTransaction.wait(2);
     await myVehiclsContract.deployTransaction.wait(2);
+    await myComicContract.deployTransaction.wait(2);
     console.log(`Confirmed!`);
     await verify(myEchelonContract.address,[],"TheEchelon");
     await verify(myRacePermitContract.address,[],"RacePermit");
     await verify(myVehiclsContract.address,[],"Vehicls");
+    await verify(myComicContract.address,[],"DrivrsComic");
   }
 
   const verify = async (contractAddress, args,contractName) => {
